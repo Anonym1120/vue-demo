@@ -5,6 +5,14 @@
 元素 {{ item }}
 </div>
 </transition-group>
+
+<hr/>
+
+<button @click="click2">添加元素</button>
+<transition-group tag="ul" name="list">
+<li v-for="list in lists" :key="list">{{ list }}</li>
+</transition-group>
+
 </template>
 
 <script>
@@ -12,12 +20,17 @@
 export default {
     data() {
         return {
-            items: [1, 2, 3, 4, 5]
+            items: [1, 2, 3],
+            lists: [1, 2, 3],
         }
     },
     methods: {
         click() {
             this.items.push(this.items[this.items.length-1] +1)
+        },
+
+        click2() {
+            this.lists.push(this.lists[this.lists.length-1] +1)
         }
     }
 }
