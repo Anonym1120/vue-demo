@@ -4,5 +4,5 @@ import router from './router'
 import store from './store'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.js'
-
+import 'velocityjs'
 createApp(App).use(store).use(router).mount('#app')
